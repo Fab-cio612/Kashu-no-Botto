@@ -7,6 +7,7 @@ const { commands } = require('./commands.js')
 const client = new Discord.Client();
 
 client.once('ready', () => {
+    console.log('ready!');
     client.user.setActivity(' | ;help', { type: 'LISTENING' });
 });
 
