@@ -67,7 +67,10 @@ const leave = (message) => {
 const playSong = (guildId) => {
     let server = servers.get(guildId);
 
-    if(!server.queue.length) return;
+    if(!server.queue.length) {
+        server.currentSong = null;
+        return;
+    }
     server.currentSong = server.queue.shift();
     server.dispatcher = server.conn.play(ytdl(`https://www.youtube.com/watch?v=${server.currentSong.id}`, {filter: 'audioonly'}));
     
