@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
-const { token } = require('./token.json');
 
 const { commands } = require('./commands.js')
 
