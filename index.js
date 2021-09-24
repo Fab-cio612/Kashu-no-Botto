@@ -30,4 +30,4 @@ client.on('message', message => {
     return message.channel.send("I don't know that command");
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
